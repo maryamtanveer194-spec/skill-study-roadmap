@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillPath - Study Roadmap Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <!-- =======================
+     NAVBAR
+======================= -->
+<nav class="navbar">
+    <h1 onclick="goHome()" class="logo">
+        SkillPath
+    </h1>
+    <div id="navbarButtons">
+        <button onclick="showSection('loginSection')">
+            Login
+        </button>
+        <button onclick="showSection('registerSection')">
+            Sign Up
+        </button>
+    </div>
+</nav>
+    <!-- HOME -->
+    <!-- =======================
+     HOME
+======================= -->
+<section id="homeSection" class="section active">
+    <div class="home-wrapper">
+        <!-- HERO -->
+        <div class="home-hero">
+            <div class="hero-content">
+                <p class="hero-label">
+                    PERSONALIZED LEARNING PLATFORM
+                </p>
+                <h2>
+                    Learn Smarter.<br>
+                    Build Your Future.
+                </h2>
+                <p class="hero-description">
+                    SkillPath helps you create a personalized,
+                    step-by-step learning roadmap based on your
+                    goals, skill level, and available study time.
+                </p>
+                <div class="hero-buttons">
+                    <button
+                        class="hero-primary-btn"
+                        onclick="showSection('registerSection')"
+                    >
+                        Get Started →
+                    </button>
+                    <button
+                        class="hero-secondary-btn"
+                        onclick="showSection('loginSection')"
+                    >
+                        I Already Have an Account
+                    </button>
+                </div>
+            </div>
+            <!-- ROADMAP PREVIEW -->
+            <div class="hero-preview">
+                <div class="preview-card">
+                    <div class="preview-top">
+                        <div>
+                            <span>MY ROADMAP</span>
+                            <h3>Web Development</h3>
+                        </div>
+                        <div class="preview-icon">
+                            🚀
+                        </div>
+                    </div>
+                    <div class="preview-progress">
+                        <div class="preview-progress-header">
+                            <span>Learning Progress</span>
+                            <strong>65%</strong>
+                        </div>
+                        <div class="preview-progress-bar">
+                            <div class="preview-progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="preview-topics">
+                        <div class="preview-topic completed">
+                            <span>✓</span>
+                            HTML Basics
+                        </div>
+                        <div class="preview-topic completed">
+                            <span>✓</span>
+                            CSS Fundamentals
+                        </div>
+                        <div class="preview-topic">
+                            <span>○</span>
+                            JavaScript Basics
+                        </div>
+                        <div class="preview-topic">
+                            <span>○</span>
+                            Node.js & Express
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FEATURES -->
+        <div class="features-section">
+            <div class="features-heading">
+                <p class="hero-label">
+                    WHY SKILLPATH?
+                </p>
+                <h3>
+                    Everything you need to keep learning
+                </h3>
+                <p>
+                    Turn your learning goals into a clear and
+                    manageable journey.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        🎯
+                    </div>
+                    <h4>
+                        Personalized Roadmaps
+                    </h4>
+                    <p>
+                        Get a learning path based on your
+                        goal, current level and purpose.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        📈
+                    </div>
+                    <h4>
+                        Track Your Progress
+                    </h4>
+                    <p>
+                        Mark topics as completed and see
+                        how far you've progressed.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        🚀
+                    </div>
+                    <h4>
+                        Build Your Skills
+                    </h4>
+                    <p>
+                        Follow a clear step-by-step journey
+                        and keep moving toward your goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- FINAL CTA -->
+        <div class="home-cta">
+            <h3>
+                Ready to start your learning journey?
+            </h3>
+            <p>
+                Create your personalized roadmap today.
+            </p>
+            <button
+                onclick="showSection('registerSection')"
+            >
+                Create My Roadmap →
+            </button>
+        </div>
+    </div>
+</section>
+    <!-- REGISTER -->
+    <section id="registerSection" class="section">
+        <div class="card">
+            <button class="back-btn" onclick="showSection('homeSection')">
+    ← Back to Home
+</button>
+            <h2>Create Account</h2>
+            <form id="registerForm">
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Your Name"
+                    required
+                >
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Email"
+                    required
+                >
+                <div class="password-box">
+    <input
+        type="password"
+        id="registerPassword"
+        placeholder="Password"
+        required
+    >
+
+    <button
+        type="button"
+        class="eye-button"
+        onclick="togglePassword('registerPassword', this)"
+    >
+        👁
+    </button>
+</div>
+                
+                <button type="submit">
+                    Create Account
+                </button>
+            </form>
+            <p id="registerMessage"></p>
+        </div>
+    </section>
+    <!-- LOGIN -->
+    <section id="loginSection" class="section">
+        <div class="card">
+            <button class="back-btn" onclick="showSection('homeSection')">
+    ← Back to Home
+</button>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email"
+                    required
+                >
+                <div class="password-box">
+    <input
+        type="password"
+        id="loginPassword"
+        placeholder="Password"
+        required
+    >
+
+    <button
+        type="button"
+        class="eye-button"
+        onclick="togglePassword('loginPassword', this)"
+    >
+        
+    👁
+    </button>
+</div>
+                
+                <button type="submit">
+                    Login
+                </button>
+            </form>
+            <p id="loginMessage"></p>
+        </div>
+    </section>
+    <!-- DASHBOARD -->
+    <!-- =======================
+     DASHBOARD
+======================= -->
+<section id="dashboardSection" class="section">
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <p class="dashboard-label">YOUR LEARNING JOURNEY</p>
+                <h2>
+                    Welcome, <span id="dashboardUserName">Student</span>! 
+                </h2>
+                <p class="dashboard-subtitle">
+                    Keep learning, keep growing, and achieve your goals.
+                </p>
+            </div>
+            <div class="dashboard-actions">
+                <button onclick="showSection('roadmapFormSection')">
+                    + Create New Roadmap
+                </button>
+            </div>
+        </div>
+        <!-- STATISTICS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    📚
+                </div>
+                <div>
+                    <h3 id="totalRoadmaps">0</h3>
+                    <p>Total Roadmaps</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    🎯
+                </div>
+                <div>
+                    <h3 id="completedRoadmaps">0</h3>
+                    <p>Completed Roadmaps</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    📈
+                </div>
+                <div>
+                    <h3 id="averageProgress">0%</h3>
+                    <p>Average Progress</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    🚀
+                </div>
+                <div>
+                    <h3>SkillPath</h3>
+                    <p>Your Learning Journey</p>
+                </div>
+            </div>
+        </div>
+        <!-- ROADMAPS -->
+        <div class="roadmaps-heading">
+            <div>
+                <h3>My Roadmaps</h3>
+                <p>
+                    Track your learning progress and continue where you left off.
+                </p>
+            </div>
+        </div>
+        <div id="roadmapsContainer"></div>
+    </div>
+</section>
+    <!-- CREATE ROADMAP -->
+    <!-- =======================
+     CREATE ROADMAP
+======================= -->
+<section id="roadmapFormSection" class="section">
+    <div class="roadmap-create-wrapper">
+        <div class="roadmap-create-header">
+            <p class="dashboard-label">PERSONALIZED LEARNING</p>
+            <button class="back-btn" onclick="showSection('dashboardSection')">
+    ← Back to Dashboard
+</button>
+            <h2>Create Your Roadmap</h2>
+            <p>
+                Tell us about your learning goal and we'll create
+                a step-by-step roadmap for you.
+            </p>
+        </div>
+        <div class="roadmap-form-card">
+            <form id="roadmapForm">
+                <!-- GOAL -->
+                <div class="form-group">
+                    <label for="goal">
+                        What do you want to learn?
+                    </label>
+                    <select id="goal" required>
+                        <option value="">
+                            Select your goal
+                        </option>
+                        <option value="Web Development">
+                            🌐 Web Development
+                        </option>
+                        <option value="Python Development">
+                            🐍 Python Development
+                        </option>
+                        <option value="Data Science">
+                            📊 Data Science
+                        </option>
+                        <option value="UI/UX Design">
+                            🎨 UI/UX Design
+                        </option>
+                        <option value="Graphic Design">
+                            🖌️ Graphic Design
+                        </option>
+                    </select>
+                </div>
+                <!-- LEVEL -->
+                <div class="form-group">
+                    <label for="level">
+                        What is your current level?
+                    </label>
+                    <select id="level" required>
+                        <option value="">
+                            Select your level
+                        </option>
+                        <option value="Beginner">
+                            🌱 Beginner
+                        </option>
+                        <option value="Intermediate">
+                            📚 Intermediate
+                        </option>
+                        <option value="Advanced">
+                            🚀 Advanced
+                        </option>
+                    </select>
+                </div>
+                <!-- STUDY TIME -->
+                <div class="form-group">
+                    <label for="studyTime">
+                        How much time can you study?
+                    </label>
+                    <select id="studyTime" required>
+                        <option value="">
+                            Select study time
+                        </option>
+                        <option value="1 hour/day">
+                            1 hour/day
+                        </option>
+                        <option value="2 hours/day">
+                            2 hours/day
+                        </option>
+                        <option value="3 hours/day">
+                            3 hours/day
+                        </option>
+                        <option value="4+ hours/day">
+                            4+ hours/day
+                        /option>
+                    </select>
+                </div>
+                <!-- PURPOSE -->
+                <div class="form-group">
+                    <label for="purpose">
+                        What is your purpose?
+                    </label>
+                    <select id="purpose" required>
+                        <option value="">
+                            Select your purpose
+                        </option>
+                        <option value="Job">
+                            💼 Job
+                        </option>
+                        <option value="Freelancing">
+                            💻 Freelancing
+                        </option>
+                        <option value="Academic">
+                            🎓 Academic
+                        </option>
+                        <option value="Personal Development">
+                            🌟 Personal Development
+                        </option>
+                    </select>
+                </div>
+                <button
+                    type="submit"
+                    class="generate-btn"
+                >
+                    Generate My Roadmap →
+                </button>
+            </form>
+            <p id="roadmapMessage"></p>
+        </div>
+    </div>
+</section>
+    <!-- ROADMAP VIEW -->
+    <section id="roadmapSection" class="section">
+        <div class="card">
+            <h2 id="roadmapTitle">
+                Your Roadmap
+            </h2>
+            <p id="roadmapInfo"></p>
+            <div id="completionMessage">
+            </div>
+            <!-- PROGRESS -->
+            <div class="progress-box">
+    <h3>Learning Progress</h3>
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+    <p id="roadmapProgress">
+        Progress: 0/0 completed (0%)
+    </p>
+</div>
+            <!-- TOPICS -->
+            <div id="roadmapTopics"></div>
+            <button class="back-btn" onclick="showSection('dashboardSection')">
+           ← Back to Dashboard
+         </button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

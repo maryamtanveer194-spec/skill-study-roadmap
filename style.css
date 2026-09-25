@@ -1,0 +1,1474 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #243b53;
+    line-height: 1.6;
+}
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background: #243b53;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+.navbar h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.navbar button {
+    background: white;
+    color: #243b53;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.navbar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    display: none;
+    min-height: calc(100vh - 70px);
+    padding: 55px 8%;
+}
+
+.section.active {
+    display: block;
+}
+
+
+/* =========================
+   HERO / HOME
+========================= */
+
+.hero {
+    max-width: 850px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #243b53;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    font-size: 18px;
+    color: #52667a;
+    line-height: 1.8;
+}
+
+.hero button {
+    background: #243b53;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.hero button:hover {
+    background: #1c3045;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: white;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 38px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(36, 59, 83, 0.08);
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 28px;
+    color: #243b53;
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d6dee7;
+    border-radius: 9px;
+    font-size: 15px;
+    background: white;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #243b53;
+    box-shadow: 0 0 0 3px rgba(36, 59, 83, 0.08);
+}
+
+label {
+    font-weight: 600;
+    margin-top: 8px;
+    color: #34495e;
+}
+
+
+/* =========================
+   GENERAL BUTTONS
+========================= */
+
+.card button,
+.dashboard button {
+    background: #243b53;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.card button:hover,
+.dashboard button:hover {
+    background: #1c3045;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dashboard h2 {
+    font-size: 34px;
+    margin-bottom: 28px;
+}
+
+.dashboard h3 {
+    font-size: 26px;
+    margin-top: 45px;
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   DASHBOARD TOP AREA
+========================= */
+
+.dashboard::before {
+    content: "";
+    display: block;
+}
+
+
+/* =========================
+   ROADMAP CONTAINER
+========================= */
+
+#roadmapsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+
+/* =========================
+   ROADMAP CARD
+========================= */
+
+.roadmap-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(36, 59, 83, 0.08);
+    border: 1px solid #e7edf3;
+    transition: 0.25s;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(36, 59, 83, 0.12);
+}
+
+.roadmap-card h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #243b53;
+}
+
+.roadmap-card p {
+    color: #52667a;
+    margin: 7px 0;
+}
+
+.roadmap-card button {
+    margin-top: 18px;
+    margin-right: 8px;
+}
+
+
+/* =========================
+   TOPICS
+========================= */
+
+.topic {
+    padding: 17px 20px;
+    margin: 12px 0;
+    border: 1px solid #dce4ec;
+    border-radius: 10px;
+    background: white;
+    transition: 0.2s;
+}
+
+.topic:hover {
+    border-color: #b9c8d8;
+    box-shadow: 0 4px 12px rgba(36, 59, 83, 0.06);
+}
+
+.topic.completed {
+    background: #eef8f1;
+    border-color: #cce6d3;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.topic label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.topic input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   ROADMAP INFORMATION
+========================= */
+
+#roadmapTitle {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#roadmapInfo {
+    color: #52667a;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+#registerMessage,
+#loginMessage,
+#roadmapMessage {
+    margin-top: 16px;
+    font-weight: 600;
+    color: #243b53;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .section {
+        padding: 35px 5%;
+    }
+
+    .hero {
+        margin: 70px auto;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #roadmapsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .navbar button {
+        padding: 9px 15px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .dashboard h2 {
+        font-size: 28px;
+    }
+
+    .dashboard h3 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    #roadmapTitle {
+        font-size: 27px;
+    }
+}
+/* =========================
+   DASHBOARD HEADER
+========================= */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.dashboard-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #718096;
+    margin-bottom: 8px;
+}
+
+.dashboard-header h2 {
+    margin-bottom: 5px;
+    font-size: 36px;
+}
+
+.dashboard-subtitle {
+    color: #718096;
+    font-size: 16px;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.dashboard-actions button {
+    white-space: nowrap;
+}
+
+.dashboard-actions .logout-btn {
+    background: white;
+    color: #243b53;
+    border: 1px solid #d6dee7;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 45px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e5ebf1;
+    border-radius: 15px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    box-shadow: 0 6px 25px rgba(36, 59, 83, 0.06);
+    transition: 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(36, 59, 83, 0.1);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: #edf3f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 25px;
+    color: #243b53;
+}
+
+.stat-card p {
+    margin-top: 2px;
+    color: #718096;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ROADMAP HEADING
+========================= */
+
+.roadmaps-heading {
+    margin-bottom: 20px;
+}
+
+.roadmaps-heading h3 {
+    margin: 0 0 5px;
+    font-size: 26px;
+}
+
+.roadmaps-heading p {
+    color: #718096;
+    font-size: 15px;
+}
+
+
+/* =========================
+   DASHBOARD ROADMAP CARDS
+========================= */
+
+.roadmap-card {
+    position: relative;
+}
+
+.roadmap-card h4 {
+    font-size: 21px;
+}
+
+.roadmap-card p:last-of-type {
+    font-weight: 600;
+    color: #243b53;
+}
+
+
+/* =========================
+   MOBILE DASHBOARD
+========================= */
+
+@media (max-width: 1000px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header h2 {
+        font-size: 29px;
+    }
+
+    .dashboard-actions {
+        width: 100%;
+    }
+
+    .dashboard-actions button {
+        flex: 1;
+    }
+
+}
+/* =========================
+   ROADMAP PROGRESS
+========================= */
+
+.progress-container {
+    margin-top: 18px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #52667a;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 9px;
+    background: #e8edf2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #243b53;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #718096;
+    margin-top: 7px;
+}
+
+
+/* =========================
+   EMPTY ROADMAPS
+========================= */
+
+.empty-roadmaps {
+    background: white;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #e5ebf1;
+}
+
+.empty-roadmaps h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.empty-roadmaps p {
+    color: #718096;
+}
+/* =========================
+   ROADMAP VIEW
+========================= */
+
+#roadmapSection .card {
+    max-width: 850px;
+    padding: 40px;
+}
+
+#roadmapTitle {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+#roadmapInfo {
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   LARGE PROGRESS BOX
+========================= */
+
+.roadmap-progress-box {
+    background: #eef4f8;
+    border-left: 5px solid #243b53;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.progress-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.progress-title span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #243b53;
+}
+
+.progress-title strong {
+    font-size: 18px;
+    color: #243b53;
+}
+
+.large-progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #dce5ec;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.large-progress-fill {
+    height: 100%;
+    background: #243b53;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.roadmap-progress-box p {
+    margin-top: 12px;
+    color: #52667a;
+    font-weight: 600;
+}
+
+
+/* =========================
+   TOPICS HEADING
+========================= */
+
+.topics-heading {
+    margin-bottom: 18px;
+}
+
+.topics-heading h3 {
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+
+.topics-heading p {
+    color: #718096;
+    font-size: 14px;
+}
+
+
+/* =========================
+   TOPIC CARD
+========================= */
+
+#roadmapTopics {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#roadmapTopics .topic {
+    margin: 0;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    background: white;
+    border: 1px solid #e1e8ef;
+    border-radius: 11px;
+    transition: 0.2s;
+}
+
+#roadmapTopics .topic:hover {
+    transform: translateX(3px);
+    box-shadow: 0 5px 15px rgba(36, 59, 83, 0.08);
+}
+
+#roadmapTopics .topic label {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 0;
+    font-weight: 600;
+    color: #243b53;
+}
+
+#roadmapTopics .topic input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+    margin: 0;
+}
+
+.topic-status {
+    font-size: 13px;
+    color: #718096;
+    font-weight: 600;
+}
+
+#roadmapTopics .topic.completed {
+    background: #f0f8f2;
+    border-color: #cce4d1;
+}
+
+#roadmapTopics .topic.completed .topic-status {
+    color: #3f7650;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+#roadmapSection .card > button {
+    margin-top: 28px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    #roadmapSection .card {
+        padding: 24px;
+    }
+
+    #roadmapTitle {
+        font-size: 27px;
+    }
+
+    #roadmapTopics .topic {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .topic-status {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+}
+/* =========================
+   CREATE ROADMAP PAGE
+========================= */
+
+.roadmap-create-wrapper {
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+
+/* HEADER */
+
+.roadmap-create-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.roadmap-create-header h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #243b53;
+}
+
+.roadmap-create-header p:last-child {
+    color: #718096;
+    font-size: 16px;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* FORM CARD */
+
+.roadmap-form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid #e3eaf0;
+    box-shadow: 0 10px 35px rgba(36, 59, 83, 0.08);
+}
+
+
+/* FORM GROUP */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    margin: 0;
+    font-size: 15px;
+    color: #243b53;
+}
+
+
+/* SELECT */
+
+.form-group select {
+    cursor: pointer;
+    height: 50px;
+}
+
+
+/* GENERATE BUTTON */
+
+.generate-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px !important;
+    font-size: 16px;
+    font-weight: 700;
+    background: #243b53 !important;
+    border-radius: 10px !important;
+}
+
+.generate-btn:hover {
+    background: #1c3045 !important;
+    transform: translateY(-2px);
+}
+
+
+/* MESSAGE */
+
+#roadmapMessage {
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .roadmap-create-header h2 {
+        font-size: 30px;
+    }
+
+    .roadmap-form-card {
+        padding: 25px 20px;
+    }
+
+}
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.home-hero {
+    min-height: 580px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+    padding: 55px 0 80px;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-label {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #718096;
+    margin-bottom: 14px;
+}
+
+.hero-content h2 {
+    font-size: 56px;
+    line-height: 1.12;
+    color: #243b53;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    font-size: 17px;
+    color: #64748b;
+    line-height: 1.8;
+    max-width: 570px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+    padding: 14px 22px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.hero-primary-btn {
+    background: #243b53;
+    color: white;
+    border: 1px solid #243b53;
+}
+
+.hero-primary-btn:hover {
+    background: #1c3045;
+    transform: translateY(-2px);
+}
+
+.hero-secondary-btn {
+    background: white;
+    color: #243b53;
+    border: 1px solid #d5dee7;
+}
+
+.hero-secondary-btn:hover {
+    border-color: #243b53;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ROADMAP PREVIEW
+========================= */
+
+.hero-preview {
+    display: flex;
+    justify-content: center;
+}
+
+.preview-card {
+    width: 100%;
+    max-width: 390px;
+    background: white;
+    padding: 27px;
+    border-radius: 20px;
+    border: 1px solid #e1e8ef;
+    box-shadow: 0 20px 45px rgba(36, 59, 83, 0.12);
+    transform: rotate(1deg);
+}
+
+.preview-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.preview-top span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #8a99a8;
+}
+
+.preview-top h3 {
+    margin-top: 5px;
+    font-size: 22px;
+    color: #243b53;
+}
+
+.preview-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #edf3f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+
+/* =========================
+   PREVIEW PROGRESS
+========================= */
+
+.preview-progress {
+    margin-bottom: 25px;
+}
+
+.preview-progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #52667a;
+}
+
+.preview-progress-header strong {
+    color: #243b53;
+}
+
+.preview-progress-bar {
+    width: 100%;
+    height: 9px;
+    background: #e6edf2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.preview-progress-fill {
+    width: 65%;
+    height: 100%;
+    background: #243b53;
+    border-radius: 20px;
+}
+
+
+/* =========================
+   PREVIEW TOPICS
+========================= */
+
+.preview-topics {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.preview-topic {
+    padding: 12px 14px;
+    border-radius: 9px;
+    background: #f7f9fb;
+    color: #52667a;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.preview-topic span {
+    font-weight: 800;
+}
+
+.preview-topic.completed {
+    background: #eef8f1;
+    color: #416b4d;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section {
+    padding: 80px 0;
+    border-top: 1px solid #e4eaf0;
+}
+
+.features-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features-heading h3 {
+    font-size: 32px;
+    color: #243b53;
+    margin-bottom: 8px;
+}
+
+.features-heading > p:last-child {
+    color: #718096;
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid #e3eaf0;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 22px rgba(36, 59, 83, 0.05);
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(36, 59, 83, 0.09);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: #edf3f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.feature-card h4 {
+    font-size: 19px;
+    color: #243b53;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.home-cta {
+    margin: 30px 0 70px;
+    padding: 60px 30px;
+    text-align: center;
+    background: #243b53;
+    color: white;
+    border-radius: 20px;
+}
+
+.home-cta h3 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.home-cta p {
+    color: #d6e0e8;
+    margin-bottom: 24px;
+}
+
+.home-cta button {
+    background: white;
+    color: #243b53;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.home-cta button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HOME MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .home-hero {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-content h2 {
+        font-size: 43px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-preview {
+        margin: auto;
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .home-hero {
+        padding-top: 35px;
+    }
+
+    .hero-content h2 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-primary-btn,
+    .hero-secondary-btn {
+        width: 100%;
+    }
+
+    .preview-card {
+        transform: none;
+    }
+
+    .features-heading h3 {
+        font-size: 27px;
+    }
+
+    .home-cta {
+        padding: 45px 20px;
+    }
+
+    .home-cta h3 {
+        font-size: 25px;
+    }
+
+}
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn {
+    background: transparent !important;
+    color: #52667a !important;
+    border: 1px solid #dce4ec !important;
+    padding: 9px 15px !important;
+    border-radius: 8px !important;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 22px;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: #f5f7fb !important;
+    color: #243b53 !important;
+    transform: translateX(-2px);
+}
+.logo {
+    cursor: pointer;
+}
+/* =========================
+   COMPLETION MESSAGE
+========================= */
+
+#completionMessage {
+    display: none;
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: #eef8f1;
+    color: #2f6b3f;
+    border: 1px solid #cce6d2;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+/* PASSWORD SHOW / HIDE */
+
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.eye-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: transparent !important;
+    color: #243b53 !important;
+
+    border: none;
+    padding: 5px !important;
+    margin: 0 !important;
+
+    cursor: pointer;
+    font-size: 18px;
+}
+/* PASSWORD EYE BUTTON */
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Eye */
+.eye-icon {
+    width: 18px;
+    height: 12px;
+
+    border: 2px solid #243b53;
+    border-radius: 50%;
+
+    position: relative;
+    display: block;
+}
+
+/* Eye pupil */
+.eye-icon::after {
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    background: #243b53;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+/* Line when password is visible */
+.password-toggle.showing .eye-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 23px;
+    height: 2px;
+
+    background: #243b53;
+
+    top: 5px;
+    left: -3px;
+
+    transform: rotate(-45deg);
+}
